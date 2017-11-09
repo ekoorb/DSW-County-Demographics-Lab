@@ -11,15 +11,30 @@ def main():
 
 def alphabetically_first_county(counties):
     """Return the county with the name that comes first alphabetically."""
-
-
+    first = counties[0] ["County"]
+    for c in counties:
+        if c["County"] < first:
+            first = c["County"]
+    retrun first
 def county_most_under_18(counties):
     """Return the name and state of a county ("<county name>, <state>") with the highest percent of under 18 year olds."""
-
+C =counties [0] ["County"]
+S =counties [0] ["State"]
+highest =counties[0]["Age"]["Percent Under 18 Years"]
+for a in counties:
+    if a["Age"]["Percent Under 18 Years"] > highest:
+        highest =a["Age"]["Percent Under 18 Years"]
+        C = a["County"]
+        S= a["State"]
+ return C+","+S
     
 def percent_most_under_18(counties):
     """Return the highest percent of under 18 year olds."""
-
+highest =counties[0]["Age"]["Percent Under 18 Years"]
+for age in counties:
+    if age["Age"]["Percent Under 18 Years"] > highest:
+        highest = age["age"]["Percent Over 18 Years"]
+return highest
     
 def most_under_18(counties):
     """Return a list with the name and state of a county ("<county name>, <state>") and the percent of under 18 year olds for a county with the highest percent of under 18 year olds."""
